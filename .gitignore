@@ -1,0 +1,24 @@
+# secrets
+.env
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.python-version
+
+# editor / IDE
+.idea/
+.vscode/
+.claude/
+
+# run outputs — never commit
+output/
+logs/
+data/*.db
+
+# excel lockfiles
+~$*.xlsx
+
+# misc
+*.log

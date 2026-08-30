@@ -1,0 +1,330 @@
+au:
+  federal:
+  - abf.gov.au
+  - accc.gov.au
+  - acic.gov.au
+  - ato.gov.au
+  - business.gov.au
+  - dva.gov.au
+  - esafety.gov.au
+  - fairwork.gov.au
+  - familyrelationships.gov.au
+  - fcfcoa.gov.au
+  - health.gov.au
+  - healthdirect.gov.au
+  - immunisationhandbook.health.gov.au
+  - moneysmart.gov.au
+  - myagedcare.gov.au
+  - ndis.gov.au
+  - nema.gov.au
+  - pregnancybirthbaby.org.au
+  - raisingchildren.net.au
+  - scamwatch.gov.au
+  - servicesaustralia.gov.au
+  - smartraveller.gov.au
+  municipal:
+    adelaide:
+    - cityofadelaide.com.au
+    australian_capital_territory:
+    - accesscanberra.act.gov.au
+    blacktown:
+    - blacktown.nsw.gov.au
+    brisbane:
+    - brisbane.qld.gov.au
+    casey:
+    - casey.vic.gov.au
+    darwin:
+    - darwin.nt.gov.au
+    hobart:
+    - hobartcity.com.au
+    melbourne:
+    - melbourne.vic.gov.au
+    newcastle:
+    - cn.t1cloud.com
+    perth:
+    - perth.wa.gov.au
+    stirling:
+    - stirling.wa.gov.au
+    sunshine_coast:
+    - sunshinecoast.qld.gov.au
+    sydney:
+    - cityofsydney.nsw.gov.au
+  municipal_to_state:
+    adelaide: south_australia
+    australian_capital_territory: australian_capital_territory
+    blacktown: new_south_wales
+    brisbane: queensland
+    casey: victoria
+    darwin: northern_territory
+    hobart: tasmania
+    melbourne: victoria
+    newcastle: new_south_wales
+    perth: western_australia
+    stirling: western_australia
+    sunshine_coast: queensland
+    sydney: new_south_wales
+  state:
+    australian_capital_territory:
+    - act.gov.au
+    new_south_wales:
+    - health.nsw.gov.au
+    - iptaas.health.nsw.gov.au
+    - legalaid.nsw.gov.au
+    - nsw.gov.au
+    - schn.health.nsw.gov.au
+    - service.nsw.gov.au
+    northern_territory:
+    - nt.gov.au
+    queensland:
+    - legalaid.qld.gov.au
+    - qld.gov.au
+    south_australia:
+    - dhs.sa.gov.au
+    - sa.gov.au
+    - sahealth.sa.gov.au
+    tasmania:
+    - concessions.tas.gov.au
+    - health.tas.gov.au
+    - legalaid.tas.gov.au
+    - transport.tas.gov.au
+    victoria:
+    - betterhealth.vic.gov.au
+    - health.vic.gov.au
+    - housing.vic.gov.au
+    - legalaid.vic.gov.au
+    - services.dffh.vic.gov.au
+    western_australia:
+    - healthywa.wa.gov.au
+    - legalaid.wa.gov.au
+    - wa.gov.au
+    - wacountry.health.wa.gov.au
+ca:
+  federal:
+  - antifraudcentre-centreantifraude.ca
+  - canada.ca
+  - chrt-tcdp.gc.ca
+  - competition-bureau.canada.ca
+  - crtc.gc.ca
+  - fct-cf.ca
+  - inspection.canada.ca
+  - ised-isde.canada.ca
+  - protection-passager-passenger.otc-cta.gc.ca
+  - rcmp.ca
+  - sac-isc.gc.ca
+  - veterans.gc.ca
+  - web.crtc.gc.ca
+  municipal:
+    brampton:
+    - brampton.ca
+    - peelregion.ca
+    burnaby:
+    - burnaby.ca
+    - translink.ca
+    calgary:
+    - calgary.ca
+    edmonton:
+    - edmonton.ca
+    halifax:
+    - halifax.ca
+    hamilton:
+    - hamilton.ca
+    kitchener:
+    - grt.ca
+    - kitchener.ca
+    - regionofwaterloo.ca
+    london:
+    - london.ca
+    markham:
+    - markham.ca
+    - york.ca
+    mississauga:
+    - mississauga.ca
+    - peelregion.ca
+    oakville:
+    - halton.ca
+    - oakville.ca
+    ottawa:
+    - ottawa.ca
+    - ottawapublichealth.ca
+    regina:
+    - regina.ca
+    richmond:
+    - richmond.ca
+    richmond_hill:
+    - richmondhill.ca
+    - york.ca
+    saskatoon:
+    - saskatchewan.ca
+    - saskatoon.ca
+    surrey:
+    - surrey.ca
+    toronto:
+    - toronto.ca
+    - ttc.ca
+    vancouver:
+    - vancouver.ca
+    - vpd.ca
+    vaughan:
+    - vaughan.ca
+    - york.ca
+    windsor:
+    - citywindsor.ca
+    winnipeg:
+    - legacy.winnipeg.ca
+    - manitoba.ca
+    - winnipeg.ca
+  municipal_to_state:
+    brampton: ontario
+    burnaby: british_columbia
+    calgary: alberta
+    edmonton: alberta
+    halifax: ''
+    hamilton: ontario
+    kitchener: ontario
+    london: ontario
+    markham: ontario
+    mississauga: ontario
+    oakville: ontario
+    ottawa: ontario
+    regina: ''
+    richmond: british_columbia
+    richmond_hill: ontario
+    saskatoon: ''
+    surrey: british_columbia
+    toronto: ontario
+    vancouver: british_columbia
+    vaughan: ontario
+    windsor: ontario
+    winnipeg: ''
+  provincial:
+    alberta:
+    - alberta.ca
+    british_columbia:
+    - bchousing.org
+    - fraserhealth.ca
+    - gov.bc.ca
+    - vch.ca
+    ontario:
+    - ontario.ca
+    quebec:
+    - cnesst.gouv.qc.ca
+    - quebec.ca
+    - ramq.gouv.qc.ca
+    - rrq.gouv.qc.ca
+    - saaq.gouv.qc.ca
+us:
+  federal:
+  - acl.gov
+  - azd.uscourts.gov
+  - bop.gov
+  - cdc.gov
+  - cisa.gov
+  - consumer.ftc.gov
+  - consumerfinance.gov
+  - dol.gov
+  - eeoc.gov
+  - fbi.gov
+  - fda.gov
+  - fns.usda.gov
+  - hrsa.gov
+  - identitytheft.gov
+  - ihs.gov
+  - irs.gov
+  - nhtsa.gov
+  - prose.cacd.uscourts.gov
+  - ready.gov
+  - samhsa.gov
+  - sba.gov
+  - ssa.gov
+  - transportation.gov
+  - travel.state.gov
+  - va.gov
+  - wwwnc.cdc.gov
+  municipal:
+    atlanta:
+    - atlantaga.gov
+    austin:
+    - austintexas.gov
+    boston:
+    - boston.gov
+    chicago:
+    - chicago.gov
+    houston:
+    - houstonoem.org
+    - houstontx.gov
+    - ridemetro.org
+    los_angeles:
+    - aging.lacity.gov
+    - cleanla.lacounty.gov
+    - housing.lacity.gov
+    - laanimalservices.com
+    - metro.net
+    - mva.lacounty.gov
+    - ready.lacounty.gov
+    miami:
+    - miamidade.gov
+    new_york_city:
+    - mta.info
+    - nyc-business.nyc.gov
+    - nyc.gov
+    - nyccare.nyc
+    - nychealthandhospitals.org
+    - portal.311.nyc.gov
+    philadelphia:
+    - phila.gov
+    portland:
+    - portland.gov
+    san_francisco:
+    - bart.gov
+    - healthysanfrancisco.org
+    - sf.gov
+    seattle:
+    - seattle.gov
+  municipal_to_state:
+    atlanta: ''
+    austin: texas
+    boston: ''
+    chicago: illinois
+    houston: texas
+    los_angeles: california
+    miami: florida
+    new_york_city: new_york
+    philadelphia: ''
+    portland: ''
+    san_francisco: california
+    seattle: ''
+  state:
+    california:
+    - cdss.ca.gov
+    - dhcs.ca.gov
+    - dir.ca.gov
+    - dmv.ca.gov
+    - oag.ca.gov
+    - selfhelp.courts.ca.gov
+    florida:
+    - dos.fl.gov
+    - flcourts.gov
+    - flhsmv.gov
+    - floridahealth.gov
+    - myflfamilies.com
+    - myfloridacfo.com
+    illinois:
+    - dhs.state.il.us
+    - dph.illinois.gov
+    - hfs.illinois.gov
+    - ides.illinois.gov
+    - ilsos.gov
+    - labor.illinois.gov
+    new_york:
+    - dmv.ny.gov
+    - dol.ny.gov
+    - hcr.ny.gov
+    - health.ny.gov
+    - omh.ny.gov
+    - otda.ny.gov
+    texas:
+    - dfps.texas.gov
+    - dps.texas.gov
+    - dshs.texas.gov
+    - guides.sll.texas.gov
+    - hhs.texas.gov

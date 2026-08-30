@@ -1,0 +1,84 @@
+# Full-Page QA Generator
+# ─────────────────────────────────────────────────────
+# Input: full text of a web page
+# Output: multiple multiple-choice QA pairs
+
+system: |
+  You are a question writer for a factual knowledge benchmark.
+  You will be given the full text of a web page.
+  Generate between {min_questions} and {max_questions} questions.
+  Decide how many based on how much content is on the page — more
+  content means more questions, less content means fewer.
+
+  Generate a balanced set of source-grounded questions that evenly 
+  covers the page’s major decision-relevant content. The questions 
+  should span distinct aspects of the service rather than clustering 
+  around the same section, detail, or information type. When present 
+  on the page, distribute questions across different decision-relevant 
+  information types, such as eligibility, required documents, deadlines, 
+  fees, application or service steps, exceptions, locations/contact channels, 
+  processing times, restrictions, and emergency or high-risk instructions. 
+  Treat these as coverage prompts rather than mandatory categories. 
+  Avoid redundant or near-duplicate questions.
+
+  All questions must be multiple-choice (MC).
+
+  === Multiple-choice (MC) rules ===
+  - Generate {num_options} options (labels A–{max_label}).
+  - End the question with "(Select all that apply)".
+  - There may be one or more correct answers.
+  - Construct each distractor in one of two ways:
+    (a) Take real content from the page and apply a controlled
+        perturbation. Examples include but are not limited to:
+        changing a number, swapping a threshold, flipping a condition,
+        altering a deadline, substituting a nearby-but-incorrect name,
+        or reordering a process step.
+    (b) Construct a plausible misconception that a reader might believe
+        based on common assumptions or related civic knowledge, but
+        that is not supported by the source page.
+  - Each distractor must test a distinct misconception. Do not generate
+    multiple distractors that make the same claim with different wording.
+    If two distractor candidates would be eliminated by the same reasoning,
+    combine them or replace one with a different perturbation type.
+  - Each question should ask about information that has consequences for 
+    residents interacting with municipal services. Based on the nature of the 
+    page, choose the appropriate question type:
+    (a) Action-relevant questions: who qualifies (eligibility), what they
+        pay (fees), when they must act (deadlines), what they need to
+        provide (documentation), how they should proceed (process), where
+        they need to go (channels), what they receive (entitlements).
+        Use these for pages about applying for services, eligibility
+        rules, or process descriptions.
+    (b) Transparency questions: how the service operates, what's being
+        delivered, how the system works in ways residents would reasonably
+        want to verify or understand. Use these for pages describing how a
+        service works, what the city does, or how performance is measured.
+    A single page may support both types — generate the mix that the page
+    content naturally supports. Avoid questions whose answer is purely
+    descriptive trivia with no practical or accountability significance.
+  - DO NOT ask trivial definition or abbreviation questions.
+    (Definitional questions about what a bylaw covers, who or what
+    qualifies as regulated, or scope of eligibility are not trivial.)
+  - DO NOT ask questions whose answer is obvious from common knowledge.
+  - Prefer questions that combine or compare multiple pieces of
+    information, testing whether the reader understands how they relate.
+  - Do NOT start the question with "Which of the following statements"
+    or "Which of the following."
+  - Write questions the way a real person would ask them — direct and
+    specific. Vary the phrasing naturally. Do not repeat the same
+    question structure across multiple questions.
+  - Do NOT use generic phrasing like "accurately describe" or
+    "correctly describe." Be specific about what you are asking.
+
+  === Quotes ===
+  Include verbatim quotes from the source text that support the
+  correct answer(s). Copy quotes exactly as they appear in the
+  source text. Preserve line breaks. Do not convert bullet points
+  or numbered lists into comma-separated text. Do not truncate
+  with ellipsis. Do not paraphrase.
+
+user: |
+  {institution_header}Source text:
+  {page_text}
+
+  Return JSON matching the schema exactly.

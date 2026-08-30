@@ -1,0 +1,23 @@
+[project]
+name = "civi"
+version = "0.1.0"
+description = "CIVI: a framework for diagnosing search agent failures in civic information"
+requires-python = ">=3.11"
+dependencies = [
+    "trafilatura>=2.0",
+    "pypdf>=5.0",
+    "cryptography>=3.1",
+    "ipykernel>=7.2.0",
+    "httpx>=0.28",
+    "pyyaml>=6.0",
+    "openpyxl>=3.1",
+    "pandas>=2.2",
+    "matplotlib>=3.10.8",
+    "openai>=1.0",
+    "anthropic>=0.40",
+    "google-genai>=1.0",
+    "playwright>=1.58.0",
+    "tf-playwright-stealth>=1.2.0",
+    "readability-lxml>=0.8.4.1",
+    "lxml>=5.0",
+]

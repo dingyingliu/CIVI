@@ -1,0 +1,40 @@
+CIVI-Eval Dataset License
+=========================
+
+The dataset in this repository -- the QA workbooks
+(dataset/*_qa_pairs.xlsx) and the source-page indexes
+(dataset/cofog_configs/*.json) -- is released under:
+
+    Creative Commons Attribution 4.0 International (CC BY 4.0)
+    https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt the material for any purpose,
+including commercially, under the following terms:
+
+  Attribution -- You must give appropriate credit, provide a link
+  to the license, and indicate if changes were made. You may do so
+  in any reasonable manner, but not in any way that suggests the
+  licensor endorses you or your use.
+
+  No additional restrictions -- You may not apply legal terms or
+  technological measures that legally restrict others from doing
+  anything the license permits.
+
+
+SOURCE CONTENT NOTICE
+---------------------
+
+CIVI-Eval is derived from publicly available government web pages
+published by federal, state or provincial, and municipal authorities
+in Canada, the United States, and Australia. Those underlying pages
+remain the intellectual property of their respective public-sector
+publishers. The CC BY 4.0 license above covers the curation,
+structuring, QA-pair derivation, and evaluation methodology produced
+by this project. It does not relicense the source content itself.
+
+Where source text is reproduced verbatim or near-verbatim (for
+example, in supporting-quote fields), such use is intended to fall
+under fair-use or fair-dealing provisions for research and
+educational purposes. Anyone redistributing or building on this
+dataset beyond research or educational use should consult the terms
+of service of each source domain.
