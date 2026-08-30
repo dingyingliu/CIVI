@@ -1,7 +1,5 @@
 # CIVI: A Framework for Diagnosing Search Agent Failures in Civic Information
 
-Dingying Liu, Yunshun Zhong, Wentao Zhang, Yiyuan Li — EMNLP 2026 (Main Conference)
-
 CIVI is a framework for evaluating search agents and diagnosing their failures on authoritative civic information. It combines a 4,097-question evaluation set with ARISE, a diagnostic that attributes incorrect responses to search bypass, retrieval failure, grounding failure, or comprehension failure.
 
 The public dataset is available on [Hugging Face](https://huggingface.co/datasets/dingyingliu/CIVI).
@@ -12,9 +10,9 @@ CIVI covers English-language civic information from Australia, Canada, and the U
 
 This repository provides code for:
 
-- running the agentic-search evaluation through OpenRouter and Exa;
-- applying the ARISE failure diagnostic;
-- generating and validating question-answer pairs; and
+- running the agentic-search evaluation through OpenRouter and Exa
+- applying the ARISE failure diagnostic
+- generating and validating question-answer pairs
 - managing the underlying source corpus.
 
 ## Repository structure
@@ -77,7 +75,7 @@ The output contains a summary sheet and row-level records of responses, search b
 
 ## ARISE diagnostics
 
-ARISE analyzes incorrect benchmark responses using search traces and source-injection ablation. Exact reruns require benchmark result workbooks and compatible source-text SQLite corpora under `code/data/`; these corpora are not distributed, but can be rebuilt with the ingestion step below.
+ARISE analyzes incorrect benchmark responses using search traces and source-injection ablation. Exact reruns require benchmark result workbooks and compatible source-text SQLite corpora under `code/data/`, these corpora are not distributed, but can be rebuilt with the ingestion step below.
 
 ```bash
 uv run python scripts/run_diagnostic_per_model.py \
@@ -98,7 +96,7 @@ uv run python scripts/reingest_with_quality.py \
   --delay 0.4
 ```
 
-Fetching uses Playwright with a static-HTTP fallback; extraction selects among several strategies per page. Corpora are written to `data/{city}_corpus.db`. `scripts/audit_extraction.py` reports extraction quality, `scripts/export_pages.py` dumps a corpus to text, and `scripts/manual_add_page.py` adds a page by hand when a site cannot be fetched. The corpora used in the paper are not distributed, and neither are the per-city configs that `--all-cities` expects, so `--urls-csv` is the supported entry point for new page sets.
+Fetching uses Playwright with a static-HTTP fallback, extraction selects among several strategies per page. Corpora are written to `data/{city}_corpus.db`. `scripts/audit_extraction.py` reports extraction quality, `scripts/export_pages.py` dumps a corpus to text, and `scripts/manual_add_page.py` adds a page by hand when a site cannot be fetched. The corpora used in the paper are not distributed, and neither are the per-city configs that `--all-cities` expects, so `--urls-csv` is the supported entry point for new page sets.
 
 ## Question generation
 
@@ -111,20 +109,20 @@ uv run python scripts/run_generator.py \
   --max-qa 120
 ```
 
-The pipeline generates questions from one source page per model call, performs structural checks, and verifies supporting quotations against the source text. Questions in the released dataset were additionally reviewed by two domain experts, and questions flagged by either reviewer were removed; the automatic checks alone do not reproduce that step.
+The pipeline generates questions from one source page per model call, performs structural checks, and verifies supporting quotations against the source text. Questions in the released dataset were additionally reviewed by two domain experts, and questions flagged by either reviewer were removed, the automatic checks alone do not reproduce that step.
 
 Ingestion, generation, benchmarking, and diagnosis together form the full pipeline: pages in, attributed failures out.
 
 ## Reproducibility and intended use
 
 - Live-search results may vary as search indexes, source pages, models, and APIs change.
-- Evaluation and generation use temperature 0; benchmark caches and outputs are stored under `code/output/`.
+- Evaluation and generation use temperature 0, benchmark caches and outputs are stored under `code/output/`.
 - The released source-text indexes do not include the full page contents required for exact source-injection reruns.
 - CIVI is intended for research evaluation, not for legal, medical, tax, benefits, or other professional advice.
 
 ## License
 
-The software is released under the MIT License (`code/LICENSE`). The dataset, distributed separately on Hugging Face, is released under CC BY 4.0 (`code/LICENSE-DATA`). The linked government pages remain subject to their publishers' terms.
+The software is released under the MIT License (`code/LICENSE`). The dataset, distributed separately on Hugging Face, is released under CC BY 4.0 (`code/LICENSE-DATA`).
 
 ## Citation
 
@@ -138,5 +136,3 @@ The software is released under the MIT License (`code/LICENSE`). The dataset, di
   publisher = {Association for Computational Linguistics}
 }
 ```
-
-Contact: Dingying Liu — dingyingliu@outlook.com
